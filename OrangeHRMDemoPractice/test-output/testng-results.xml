@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="2" passed="1" failed="1" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2024-08-07T18:58:30 IST" name="Default suite" finished-at="2024-08-07T18:59:34 IST" duration-ms="64381">
+    <groups>
+    </groups>
+    <test started-at="2024-08-07T18:58:30 IST" name="Default test" finished-at="2024-08-07T18:59:34 IST" duration-ms="64381">
+      <class name="CrudCandidateTest">
+        <test-method is-config="true" signature="launchOrangeHRMDemoApplication()[pri:0, instance:CrudCandidateTest@7f0eb4b4]" started-at="2024-08-07T18:58:30 IST" name="launchOrangeHRMDemoApplication" finished-at="2024-08-07T18:58:50 IST" duration-ms="20595" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchOrangeHRMDemoApplication -->
+        <test-method signature="LoginToOrangeHRMApp(java.util.HashMap)[pri:0, instance:CrudCandidateTest@7f0eb4b4]" started-at="2024-08-07T18:58:50 IST" name="LoginToOrangeHRMApp" data-provider="getData" finished-at="2024-08-07T18:59:04 IST" duration-ms="14116" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{firstName=Rahul, lastName=Verma, comments=New QA Automation Profile, course=Java,Selenium,Appium, middleName=Raj, mobileNo=+916789934517, email=rahulraj@gmail.com, url=https://opensource-demo.orangehrmlive.com/web/index.php/recruitment/addCandidate/*}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- LoginToOrangeHRMApp -->
+        <test-method is-config="true" signature="TearDown()[pri:0, instance:CrudCandidateTest@7f0eb4b4]" started-at="2024-08-07T18:59:04 IST" name="TearDown" finished-at="2024-08-07T18:59:05 IST" duration-ms="253" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TearDown -->
+        <test-method is-config="true" signature="launchOrangeHRMDemoApplication()[pri:0, instance:CrudCandidateTest@7f0eb4b4]" started-at="2024-08-07T18:59:05 IST" name="launchOrangeHRMDemoApplication" finished-at="2024-08-07T18:59:25 IST" duration-ms="20091" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchOrangeHRMDemoApplication -->
+        <test-method signature="LoginToOrangeHRMApp(java.util.HashMap)[pri:0, instance:CrudCandidateTest@7f0eb4b4]" started-at="2024-08-07T18:59:25 IST" name="LoginToOrangeHRMApp" data-provider="getData" finished-at="2024-08-07T18:59:34 IST" duration-ms="9028" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{firstName=Hemant, lastName=Verma, comments=New QA Automation Profile, course=Java,Selenium,Appium, middleName=Raj, mobileNo=+916789890517, email=hemantraj@gmail.com}]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.NullPointerException">
+            <message>
+              <![CDATA[Cannot invoke "String.isEmpty()" because "this.pattern" is null]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.NullPointerException: Cannot invoke "String.isEmpty()" because "this.pattern" is null
+at java.base/java.util.regex.Pattern.<init>(Pattern.java:1574)
+at java.base/java.util.regex.Pattern.compile(Pattern.java:1101)
+at org.openqa.selenium.support.ui.ExpectedConditions$5.<init>(ExpectedConditions.java:143)
+at org.openqa.selenium.support.ui.ExpectedConditions.urlMatches(ExpectedConditions.java:142)
+at OrangeHRMDemo.AbstractComponents.AbstractComponent.waitForURLMatch(AbstractComponent.java:22)
+at OrangeHRMDemo.PageObjects.AddCandidatesPage.addNewCandidate(AddCandidatesPage.java:60)
+at CrudCandidateTest.LoginToOrangeHRMApp(CrudCandidateTest.java:45)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:969)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:829)
+at org.testng.TestRunner.run(TestRunner.java:602)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:437)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:431)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:391)
+at org.testng.SuiteRunner.run(SuiteRunner.java:330)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+at org.testng.TestNG.runSuites(TestNG.java:1099)
+at org.testng.TestNG.run(TestNG.java:1067)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NullPointerException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- LoginToOrangeHRMApp -->
+        <test-method is-config="true" signature="TearDown()[pri:0, instance:CrudCandidateTest@7f0eb4b4]" started-at="2024-08-07T18:59:34 IST" name="TearDown" finished-at="2024-08-07T18:59:34 IST" duration-ms="232" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TearDown -->
+      </class> <!-- CrudCandidateTest -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>

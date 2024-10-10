@@ -1,0 +1,8 @@
+package EComApplication;
+import java.util.*;
+
+public class AllOrders {
+	
+	private List<Orders> orders;
+
+}

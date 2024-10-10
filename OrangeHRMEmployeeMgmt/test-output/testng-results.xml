@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2024-08-08T19:41:48 IST" name="Default suite" finished-at="2024-08-08T19:42:42 IST" duration-ms="53997">
+    <groups>
+    </groups>
+    <test started-at="2024-08-08T19:41:48 IST" name="Default test" finished-at="2024-08-08T19:42:42 IST" duration-ms="53997">
+      <class name="Tests.EmployeeMgmt">
+        <test-method signature="EmployeeAddition(java.util.HashMap)[pri:0, instance:Tests.EmployeeMgmt@3a93b025]" started-at="2024-08-08T19:41:48 IST" name="EmployeeAddition" data-provider="getData" finished-at="2024-08-08T19:42:10 IST" duration-ms="21017" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{firstName=Hailey, lastName=Wilson, middleName=Bill}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- EmployeeAddition -->
+        <test-method signature="EmployeeAddition(java.util.HashMap)[pri:0, instance:Tests.EmployeeMgmt@3a93b025]" started-at="2024-08-08T19:42:10 IST" name="EmployeeAddition" data-provider="getData" finished-at="2024-08-08T19:42:42 IST" duration-ms="32923" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{firstName=Justin, lastName=Johnathan, middleName=Tim}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- EmployeeAddition -->
+      </class> <!-- Tests.EmployeeMgmt -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>

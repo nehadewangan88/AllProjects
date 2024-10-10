@@ -1,0 +1,70 @@
+package stepDefinations;
+import static org.junit.Assert.*;
+import static io.restassured.RestAssured.*;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import PojoClasses.Location;
+import PojoClasses.PlaceDetails;
+import io.cucumber.java.en.And;
+import io.cucumber.java.en.Given;
+import io.cucumber.java.en.Then;
+import io.cucumber.java.en.When;
+import io.restassured.builder.RequestSpecBuilder;
+import io.restassured.builder.ResponseSpecBuilder;
+import io.restassured.http.ContentType;
+import io.restassured.path.json.JsonPath;
+import io.restassured.response.Response;
+import io.restassured.specification.RequestSpecification;
+import io.restassured.specification.ResponseSpecification;
+
+public class StepDefinations {
+	RequestSpecification req;
+	ResponseSpecification res;
+	RequestSpecification request ;
+	Response response;
+	@Given("Add Place Payload")
+	public void add_place_payload() {
+		PlaceDetails place = new PlaceDetails();
+		Location loc = new Location();
+		loc.setLat(-40.383494);
+		loc.setLng(23.427362);
+		place.setLocation(loc);
+		place.setAccuracy(50);
+		place.setAddress("29, side layout, cohen 09");
+		place.setLanguage("French-IN");
+		place.setName("Frontline house USA");
+		place.setPhone_number("(+91) 983 893 3937");
+		place.setWebsite("http://google.com");
+		List<String> newList = new ArrayList<String>();
+		newList.add("shoe park");
+		newList.add("shop");
+		place.setTypes(newList);
+		
+		
+	req = new RequestSpecBuilder().setBaseUri("https://rahulshettyacademy.com").setContentType(ContentType.JSON).addQueryParam("key", "qaclick123").build();
+	request = given().spec(req).body(place);
+	}
+
+	@When("user calls {string} API with post http request")
+	public void user_calls_api_with_post_http_request(String string) {
+		res = new ResponseSpecBuilder().expectContentType(ContentType.JSON).expectStatusCode(200).build();
+		response = request.when().post("/maps/api/place/add/json").then().spec(res).extract().response();
+			}
+
+	@Then("API call got success with status code {int}")
+	public void api_call_got_success_with_status_code(Integer int1) {
+	   assertEquals(response.getStatusCode(),200);	
+	}
+
+	@Then("{string} in response body is {string}")
+	public void in_response_body_is(String keyValue, String expectedValue) {
+	    String resp = response.asString();
+	    JsonPath js = new JsonPath(resp);
+	    assertEquals(js.get(keyValue).toString(),expectedValue);
+	}
+
+
+
+}

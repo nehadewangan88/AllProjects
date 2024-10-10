@@ -1,0 +1,40 @@
+import java.time.Duration;
+import java.util.concurrent.TimeUnit;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
+public class Cleartrip {
+
+	public static void main(String[] args) throws InterruptedException {
+		 
+		WebDriver driver = new ChromeDriver();
+		driver.get("https://www.cleartrip.com/");
+		driver.manage().window().maximize(); 
+		//driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
+		wait.until(ExpectedConditions.titleContains(" Cleartrip: #1 Travel Booking Site, Book Hotels, Flights Online with Great Offers. "));
+		addAdults(driver);
+				
+
+	}
+	
+	public static void addAdults(WebDriver driver)
+	{
+		driver.findElement(By.xpath("//div[@class='px-1   flex flex-middle nmx-1 pb-1']")).click();
+		WebElement passengerSelection = driver.findElement(By.xpath("//button[@class='flex flex-middle flex-between t-all fs-2 focus:bc-secondary-500 bg-transparent bc-neutral-100 c-pointer c-neutral-900']//*/span[text()='1 Adult, Economy']"));
+		passengerSelection.click();
+
+		WebElement adultCount = driver.findElement(By.xpath("//div[@class='ls-reset br-4 w-100p px-2 dropdown__item c-neutral-900 flex flex-between flex-middle px-4']/div/span[text()='Adults']/../../ul/li[3]"));
+		for (int i=1; i<5; i++)
+			{
+				adultCount.click();
+			}
+		passengerSelection.click();
+	}
+
+}

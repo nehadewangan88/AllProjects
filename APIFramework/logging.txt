@@ -1,0 +1,141 @@
+Request method:	POST
+Request URI:	https://rahulshettyacademy.com/maps/api/place/add/json?key=qaclick123
+Proxy:			<none>
+Request params:	<none>
+Query params:	key=qaclick123
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "location": {
+        "lat": 36.9088,
+        "lng": 63.9088
+    },
+    "accuracy": 50,
+    "name": "Walfort City, GreenLand",
+    "phone_number": "(+91) 983 893 3937",
+    "address": "WaterLine House Andria",
+    "types": [
+        "shoe park",
+        "shop"
+    ],
+    "website": "http://google.com",
+    "language": "French-IN"
+}
+HTTP/1.1 200 OK
+Date: Fri, 26 Apr 2024 14:43:26 GMT
+Server: Apache/2.4.52 (Ubuntu)
+Access-Control-Allow-Origin: *
+Access-Control-Allow-Methods: POST
+Access-Control-Max-Age: 3600
+Access-Control-Allow-Headers: Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With
+Content-Length: 194
+Keep-Alive: timeout=5, max=100
+Connection: Keep-Alive
+Content-Type: application/json;charset=UTF-8
+
+{
+    "status": "OK",
+    "place_id": "95cd27506f7f0a39a2f813df335aa4f6",
+    "scope": "APP",
+    "reference": "c9a3f3304e15f1d9263dea4d65129d20c9a3f3304e15f1d9263dea4d65129d20",
+    "id": "c9a3f3304e15f1d9263dea4d65129d20"
+}
+Request method:	POST
+Request URI:	https://rahulshettyacademy.com/maps/api/place/add/json?key=qaclick123
+Proxy:			<none>
+Request params:	<none>
+Query params:	key=qaclick123
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "location": {
+        "lat": 33.9088,
+        "lng": 68.9088
+    },
+    "accuracy": 50,
+    "name": "Mallina City, Glora",
+    "phone_number": "(+91) 983 893 3937",
+    "address": "WaterLine House Familla",
+    "types": [
+        "shoe park",
+        "shop"
+    ],
+    "website": "http://google.com",
+    "language": "French-IN"
+}
+HTTP/1.1 200 OK
+Date: Fri, 26 Apr 2024 14:43:28 GMT
+Server: Apache/2.4.52 (Ubuntu)
+Access-Control-Allow-Origin: *
+Access-Control-Allow-Methods: POST
+Access-Control-Max-Age: 3600
+Access-Control-Allow-Headers: Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With
+Content-Length: 194
+Keep-Alive: timeout=5, max=100
+Connection: Keep-Alive
+Content-Type: application/json;charset=UTF-8
+
+{
+    "status": "OK",
+    "place_id": "d0a67114b20ea68ebdd62f1285119455",
+    "scope": "APP",
+    "reference": "4abb7b7bf66fed66eb98a71796fc48574abb7b7bf66fed66eb98a71796fc4857",
+    "id": "4abb7b7bf66fed66eb98a71796fc4857"
+}
+Request method:	POST
+Request URI:	https://rahulshettyacademy.com/maps/api/place/add/json?key=qaclick123
+Proxy:			<none>
+Request params:	<none>
+Query params:	key=qaclick123
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "location": {
+        "lat": 31.9088,
+        "lng": 60.9088
+    },
+    "accuracy": 50,
+    "name": "Walton City, GreenValley",
+    "phone_number": "(+91) 983 893 3937",
+    "address": "WaterLine House Cloria",
+    "types": [
+        "shoe park",
+        "shop"
+    ],
+    "website": "http://google.com",
+    "language": "French-IN"
+}
+HTTP/1.1 200 OK
+Date: Fri, 26 Apr 2024 14:43:29 GMT
+Server: Apache/2.4.52 (Ubuntu)
+Access-Control-Allow-Origin: *
+Access-Control-Allow-Methods: POST
+Access-Control-Max-Age: 3600
+Access-Control-Allow-Headers: Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With
+Content-Length: 194
+Keep-Alive: timeout=5, max=100
+Connection: Keep-Alive
+Content-Type: application/json;charset=UTF-8
+
+{
+    "status": "OK",
+    "place_id": "dab9831229e8c8ea4770b90db51dea99",
+    "scope": "APP",
+    "reference": "e84b41de5179183761c7c7bc84ba1568e84b41de5179183761c7c7bc84ba1568",
+    "id": "e84b41de5179183761c7c7bc84ba1568"
+}

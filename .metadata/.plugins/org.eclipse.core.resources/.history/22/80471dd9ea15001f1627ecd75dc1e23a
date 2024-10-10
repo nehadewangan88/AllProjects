@@ -1,0 +1,52 @@
+import java.time.Duration;
+import java.util.concurrent.TimeUnit;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
+public class Cleartrip {
+
+	public static void main(String[] args) throws InterruptedException {
+		 
+		WebDriver driver = new ChromeDriver();
+		driver.get("https://www.cleartrip.com/");
+		driver.manage().window().maximize(); 
+		Actions act = new Actions(driver);
+		driver.findElement(By.xpath("//div[@class='px-1   flex flex-middle nmx-1 pb-1']")).click();
+		//driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+		wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//span[text()='Search flights']")));
+		selectTrip(driver,act,wait);
+		addAdults(driver);
+				
+
+	}
+	
+	public static void selectTrip(WebDriver driver, Actions act, WebDriverWait wait)
+	{
+		WebElement tripSelection = driver.findElement(By.xpath("//button[@class='flex flex-middle flex-between t-all fs-2 focus:bc-secondary-500 bg-transparent bc-neutral-100 c-pointer c-neutral-900']/*//span[text()='Round trip' or text()='One way']"));
+		tripSelection.click();
+		WebElement passengerSelection = driver.findElement(By.xpath("//button[@class='flex flex-middle flex-between t-all fs-2 focus:bc-secondary-500 bg-transparent bc-neutral-100 c-pointer c-neutral-900']//*/span[text()='1 Adult, Economy']"));
+		passengerSelection.click();
+		wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//li/*//span[text()='Round trip']")));
+		WebElement roundTrip = driver.findElement(By.xpath("//li/*//span[text()='Round trip']"));
+		act.moveToElement(roundTrip).click().build().perform();
+		
+	}
+	
+	public static void addAdults(WebDriver driver)
+	{
+		
+		WebElement adultCount = driver.findElement(By.xpath("//div[@class='ls-reset br-4 w-100p px-2 dropdown__item c-neutral-900 flex flex-between flex-middle px-4']/div/span[text()='Adults']/../../ul/li[3]"));
+		for (int i=1; i<5; i++)
+			{
+				adultCount.click();
+			}
+	}
+
+}

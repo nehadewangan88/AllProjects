@@ -1,0 +1,21 @@
+package PoJoPracticeSetters;
+import java.util.*;
+
+public class Types {
+
+	private List<String> shoe_park;
+	private List<String> shop;
+	public List<String> getShoe_park() {
+		return shoe_park;
+	}
+	public void setShoe_park(List<String> shoe_park) {
+		this.shoe_park = shoe_park;
+	}
+	public List<String> getShop() {
+		return shop;
+	}
+	public void setShop(List<String> shop) {
+		this.shop = shop;
+	}
+	
+}

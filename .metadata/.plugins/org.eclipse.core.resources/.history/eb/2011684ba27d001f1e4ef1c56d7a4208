@@ -1,0 +1,33 @@
+package Tests;
+
+public class Sample
+ {
+	int i=10;
+	public Sample()
+	{
+		int i=20;
+		int j = i+this.i;
+		System.out.println(j);	
+	}
+	public static void main(String args[])
+	{
+		Sample sample = new Sample();
+		sample.Sample1();
+		sample.Sample1(60,99);
+		
+	}
+	
+	public void Sample1()
+	{
+		int k = i+this.i;
+		System.out.println(k);
+	}
+	
+	public void Sample1(int x, int y)
+	{
+		
+		System.out.println(x+y);
+	}
+	
+ }
+ 

@@ -1,0 +1,44 @@
+import java.time.Duration;
+import java.util.Iterator;
+import java.util.Set;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.interactions.Actions;
+public class PracticeActions {
+
+	public static void main(String args[])
+	{
+		WebDriver driver = new ChromeDriver();
+		driver.get("https://www.irctc.co.in");
+		driver.manage().window().maximize();
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+		driver.findElement(By.xpath("//img[@id='disha-banner-close']")).click();
+		WebElement menuOptions = driver.findElement(By.xpath("//div[@class='h_menu_drop_button hidden-xs']"));
+		menuOptions.click();
+		Actions action = new Actions(driver);
+		WebElement Trains = driver.findElement(By.xpath("//label[@class='toggle']/span/*[text()='TRAINS']"));
+		action.moveToElement(Trains).click().perform();
+		WebElement irctcTrains = driver.findElement(By.xpath("//label[@class='toggle']/span[text()='IRCTC TRAINS']"));
+		action.moveToElement(irctcTrains).build().perform();
+		WebElement groupBooking = driver.findElement(By.xpath("//label[@class='toggle']/span[text()='IRCTC TRAINS']/../..//*/span[text()='Group Booking']"));
+		action.moveToElement(groupBooking).click().perform();
+		Set<String>windows = driver.getWindowHandles();
+		Iterator<String> it = windows.iterator();
+		String parentID = it.next();
+		String childID = it.next();
+		driver.switchTo().window(childID);
+		driver.findElement(By.xpath("//a[text()=' Proceed for Group booking']")).click();
+		driver.findElement(By.xpath("//li[@class='nav-item dropdown d-none d-md-block']/a[text()='Contact Us']")).click();
+		WebElement emailID = driver.findElement(By.xpath("//div[@class='dropdown-menu show']/a[@href='mailto:tourism@irctc.com']"));
+		action.moveToElement(emailID).build().perform();
+		String id = emailID.getText();
+		System.out.println(id);
+		String id1 = id.replace("[at]", "@");
+		String id2 = id1.replace("[dot]", ".");
+		System.out.println(id2);
+		
+	}
+}

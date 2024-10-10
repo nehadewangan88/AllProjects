@@ -1,0 +1,25 @@
+import java.util.ArrayList;
+
+import org.testng.annotations.Test;
+
+public class StreamPractice2 {
+	
+	@Test
+	public void getResults()
+	{
+		ArrayList<String> array = new ArrayList();
+		array.add("Happy");
+		array.add("Beena");
+		array.add("Cruise");
+		array.add("Benn");
+		array.add("Whale");
+		array.add("Finn");
+		array.add("Dale");
+		array.add("Denn");
+		array.add("Billy");
+		
+		Long countWithD = array.stream().filter(s->s.startsWith("B")).count();
+		System.out.print(countWithD);
+	}
+
+}

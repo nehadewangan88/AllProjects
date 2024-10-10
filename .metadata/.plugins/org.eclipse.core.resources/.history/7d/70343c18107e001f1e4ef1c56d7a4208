@@ -1,0 +1,10 @@
+package Practice_TestNG;
+
+public class classParent {
+	
+	public void method1()
+	{
+		System.out.println("Inside Parent Method1");
+	}
+
+}

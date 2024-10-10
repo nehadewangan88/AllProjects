@@ -1,0 +1,16 @@
+import Files.payload;
+import io.restassured.path.json.JsonPath;
+
+public class CourseAPI {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		JsonPath js = new JsonPath(payload.coursePrice());
+		System.out.println("*************************************Course Count***********************************");
+		int courseCount = js.getInt("courses.size()");
+		System.out.println(courseCount);
+
+	}
+
+}

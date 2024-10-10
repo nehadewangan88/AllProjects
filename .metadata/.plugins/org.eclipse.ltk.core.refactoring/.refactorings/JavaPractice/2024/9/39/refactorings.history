@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;classParent.java&apos; to &apos;JavaPractice/src/main/java/Practice_TestNG&apos;&#x0D;&#x0A;- Original project: &apos;JavaPractice&apos;&#x0D;&#x0A;- Destination element: &apos;JavaPractice/src/main/java/Practice_TestNG&apos;&#x0D;&#x0A;- Original element: &apos;Practice_TestNG.classParent.java&apos;" description="Copy compilation unit" destination="/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;Practice_TestNG" element1="/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;Practice_TestNG{classParent.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1727533658097" units="1" version="1.0"/>
+</session>

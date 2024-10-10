@@ -1,0 +1,16 @@
+import java.util.Arrays;
+import java.util.List;
+
+import org.testng.annotations.Test;
+
+public class StreamPractice {
+
+	@Test
+	public void javaStreamPractice()
+	{
+		List<String> names = Arrays.asList("Henery","John","Daniel","Hope","Rennie","Jason","Mac","Hardy");
+		System.out.println(names);
+		names.stream().filter(s->s.contains("e")).count();
+	}
+	
+}
